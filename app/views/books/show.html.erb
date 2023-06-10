@@ -1,17 +1,19 @@
 <h2>User info</h2>
-  <%= image_tag @book.get_image %>
+  <%= image_tag current_user.get_profile_image(100,100) %>
       <table class="table">
         <tbody>
           <tr>
             <th>name</th>
-            <th></th>
+            <th><%= current_user.name %></th>
           </tr>
           <tr>
             <th>introduction</th>
-            <th></th>
+            <th><%= current_user.introduction %></th>
           </tr>
         </tbody>
       </table>
+
+  <p><%= link_to "プロフィール編集", edit_user_path(current_user) %></p>
 
 <h2>New book</h2>
 
