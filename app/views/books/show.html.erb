@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-md-3">
       <% if @book.errors.any? %>
         <%= @book.errors.count %>errors prohibited this book from being saved:
         <ul>
@@ -17,7 +17,7 @@
       <%= render 'new', book: @booknew %>
     </div>
 
-    <div class="col-lg-8">
+    <div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
          <table class="table">
               <tbody>
